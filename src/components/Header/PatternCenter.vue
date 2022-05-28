@@ -1,6 +1,8 @@
 <template>
   <div class="pattern-center">
-    <div class="pattern-attachment"></div>
+    <div class="pattern-attachment">
+      <img class="pattern-background" src="https://amcones.cn/pc.php">
+    </div>
     <header data-aos="fade-up" data-aos-duration="1000" class="pattern-header">
       <h1 class="entry-title" v-once>{{title}}</h1>
     </header>
@@ -11,7 +13,7 @@
 export default {
   name: "PatternCenter",
   props: {
-    title: String
+    title: String,
   }
 }
 
@@ -27,7 +29,7 @@ export default {
     position: relative;
     top:0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 45vh;
   }
   .pattern-attachment{
@@ -36,8 +38,12 @@ export default {
     background-position: center center;
     background-origin: border-box;
     width: 100%;
-    height: 100%;
-    background-image: url("../../assets/background.jpeg");
+    height: 40vh;
+    overflow: hidden;
+  }
+  .pattern-attachment img{
+    width: 100%;
+    height: auto;
   }
   .pattern-header{
     position: absolute;

@@ -1,34 +1,32 @@
 <template>
   <article data-aos="fade-up" data-aos-duration="1000" class="post post-list-thumb">
     <div class="post-thumb">
-      <a href="#">
-        <img src="../../assets/background.jpeg"/>
+      <a href={{articleAddress}}>
+        <img src="{{articleImage}}"/>
       </a>
     </div>
     <div class="post-content-wrap">
       <div class="post-content">
         <div class="post-date">
-          <i class="fa fa-clock"></i>发布于5/26 17:50
+          <i class="fa fa-clock"></i>发布于{{articleDeliverTime}}
         </div>
         <h1>
-          <a href="#" class="post-title">
-            关于本站
+          <a href={{articleAddress}} class="post-title">
+            {{articleTitle}}
           </a>
         </h1>
         <div class="post-meta">
           <div class="post-meta-content meta-user">
-            <i class="fa fa-user"></i>Uli
+            <i class="fa fa-user"></i>{{articleAuthor}}
           </div>
           <div class="post-meta-content meta-watch">
-            <i class="fa fa-eye"></i>256观看
+            <i class="fa fa-eye"></i>{{articleWatcher}}观看
           </div>
           <div class="post-meta-content meta-watch">
-            <i class="fa fa-folder-open"></i>随笔
+            <i class="fa fa-folder-open"></i>{{articleClassify}}
           </div>
         </div>
-        <div class="float-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate
-          dolores ducimus error eum ex facilis fugit nam nisi odio possimus, quia quibusdam, repellat repudiandae saepe,
-          sed sunt tempore voluptate.
+        <div class="float-content">{{articleContent}}
         </div>
       </div>
     </div>
@@ -37,7 +35,17 @@
 
 <script>
 export default {
-  name: "ArticleCards"
+  name: "ArticleCards",
+  props:{
+    articleAddress:String,
+    articleImage:String,
+    articleDeliverTime:String,
+    articleTitle:String,
+    articleAuthor:String,
+    articleWatcher:Number,
+    articleClassify:String,
+    articleContent:String
+  }
 }
 </script>
 
@@ -119,7 +127,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 30px;
   border-radius: 10px;
   margin: 0 0 20px 0;
@@ -147,7 +155,7 @@ export default {
 
 @media (max-width: 900px) {
   .post {
-    height: 550px;
+    height: 570px;
     position: relative;
     display: flex;
     flex-direction: column;

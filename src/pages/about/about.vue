@@ -10,7 +10,7 @@
             <article>
               <h1 data-aos="fade-up" data-aos-duration="1000">我</h1>
               <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-                <img style="max-width: 360px;max-height: 480px;float: left;margin: 0 20px;"
+                <img style="max-width: 300px;max-height: 400px;float: left;margin: 0 20px;"
                      src="../../assets/uli.jpeg"
                 >
                 我是uli（王鼎亿），一个就读于CSUST的计算机专业大二学生。在我初中的时候就对计算机有极大的兴趣，并自学了C，C++，C#等编程语言，并用它们做了游戏等有意思的小项目。我目前也有正在运营当中的个人博客：<a href="https://amcones.cn">尤利の博客</a>
@@ -86,6 +86,9 @@ h1{
   color: rgba(73,146,188,0.83);
   font-size: 1.5rem;
   line-height: 4rem;
+}
+p{
+  max-width: 100vw;
 }
 .entry-content-box {
   max-width: 860px;

@@ -137,12 +137,12 @@ export default {
   animation: move 1s ease-in infinite;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .focus-info h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
-  .focus-info h2 {
+  .motto{
     font-size: 1.5rem;
   }
 }

@@ -63,14 +63,18 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .login {
-  background-image: url("../../assets/background.jpeg");
+  box-sizing: border-box;
+  background-image: url("../../assets/bg11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 8vh;
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,6 +98,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .login-form-content {
@@ -105,16 +110,26 @@ export default {
 }
 
 @media (max-width: 900px) {
+  .login{
+    flex-direction: column;
+    justify-content: end;
+  }
   .login-form-container{
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     border-radius: 10px;
+  }
+  .login-form-content{
+    height: 100%;
   }
   .login-content {
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
     flex-direction: column;
     justify-content: end;
+  }
+  .login-form-container form{
+    margin: 5vh 0;
   }
 }
 </style>
